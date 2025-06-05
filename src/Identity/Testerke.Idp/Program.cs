@@ -1,5 +1,4 @@
 using Duende.IdentityServer.Models;
-using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Testerke.Idp;
@@ -46,7 +45,7 @@ builder.Services.AddIdentityServer()
     ])
     .AddInMemoryIdentityResources([
         new IdentityResources.OpenId(),
-        new IdentityResources.OpenId(),
+        new IdentityResources.Profile(),
         new IdentityResources.Email(),
         new IdentityResource("color", ["favorite_color"])
     ])
