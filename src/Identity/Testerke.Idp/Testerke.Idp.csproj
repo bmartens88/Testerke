@@ -10,4 +10,16 @@
       <ProjectReference Include="..\..\Aspire\Testerke.ServiceDefaults\Testerke.ServiceDefaults.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Components\Pages\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Aspire.Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.3.0" />
+      <PackageReference Include="Duende.IdentityServer" Version="7.2.4" />
+      <PackageReference Include="Duende.IdentityServer.AspNetIdentity" Version="7.2.4" />
+      <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="9.0.5" />
+      <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="9.0.5" />
+    </ItemGroup>
+
 </Project>
