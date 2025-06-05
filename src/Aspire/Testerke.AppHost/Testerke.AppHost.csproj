@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <Sdk Name="Aspire.AppHost.Sdk" Version="9.3.0"/>
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <UserSecretsId>66fd335e-fc35-4ae9-8956-bbc5dc66dd2e</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Aspire.Hosting.AppHost" Version="9.3.0"/>
+        <PackageReference Include="Aspire.Hosting.PostgreSQL" Version="9.3.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\Backend\Testerke.Api\Testerke.Api.csproj" />
+      <ProjectReference Include="..\..\Identity\Testerke.Idp\Testerke.Idp.csproj" />
+      <ProjectReference Include="..\..\Services\MigrationService\MigrationService.csproj" />
+    </ItemGroup>
+
+</Project>
