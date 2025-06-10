@@ -1,0 +1,34 @@
+﻿using Microsoft.AspNetCore.Diagnostics;
+using Microsoft.AspNetCore.Mvc;
+
+namespace Testerke.Api.Middleware;
+
+/// <summary>
+///     Global exception handler middleware that logs unhandled exceptions and returns a standardized problem details
+///     response.
+/// </summary>
+/// <param name="logger"><see cref="ILogger{TCategoryName}" /> instance for logging purposes.</param>
+internal sealed class GlobalExceptionHandler(ILogger<GlobalExceptionHandler> logger)
+    : IExceptionHandler
+{
+    private readonly ILogger<GlobalExceptionHandler> _logger = logger;
+
+    /// <inheritdoc />
+    public async ValueTask<bool> TryHandleAsync(HttpContext httpContext, Exception exception,
+        CancellationToken cancellationToken)
+    {
+        logger.LogError(exception, "Unhandled exception occurred");
+
+        var problemDetails = new ProblemDetails
+        {
+            Status = StatusCodes.Status500InternalServerError,
+            Type = "https://datatracker.ietf.org/doc/html/rfc7231#section-6.6.1",
+            Title = "Server failure"
+        };
+
+        httpContext.Response.StatusCode = problemDetails.Status.Value;
+        await httpContext.Response.WriteAsJsonAsync(problemDetails, cancellationToken);
+
+        return true;
+    }
+}
