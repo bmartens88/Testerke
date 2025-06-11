@@ -5,8 +5,12 @@ using Testerke.Modules.Users.Domain.Users.ValueObjects;
 
 namespace Testerke.Modules.Users.Infrastructure.Users;
 
+/// <summary>
+///     Configuration for the <see cref="User" /> entity.
+/// </summary>
 internal sealed class UserConfiguration : IEntityTypeConfiguration<User>
 {
+    /// <inheritdoc />
     public void Configure(EntityTypeBuilder<User> builder)
     {
         builder.HasKey(u => u.Id);
