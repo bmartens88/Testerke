@@ -1,6 +1,7 @@
 ﻿using Ardalis.GuardClauses;
 using Testerke.Common.Domain;
 using Testerke.Common.Domain.Guards;
+using Testerke.Modules.Users.Domain.Users.Events;
 using Testerke.Modules.Users.Domain.Users.ValueObjects;
 
 namespace Testerke.Modules.Users.Domain.Users;
@@ -29,7 +30,7 @@ public sealed class User : AggregateRoot<UserId>
         LastName = Guard.Against.Length(lastName, 200);
     }
 
-    public string Email { get; private set; }
+    public string Email { get; }
 
     public string FirstName { get; private set; }
 
@@ -50,7 +51,8 @@ public sealed class User : AggregateRoot<UserId>
         UserId? id = null)
     {
         var user = new User(id ?? UserId.Create(), email, firstName, lastName);
-        // Possibly do something with a domain (integration?) event here, like UserCreatedEvent
+        // Raise domain event
+        user.Raise(new UserRegisteredDomainEvent(user.Id));
         return user;
     }
 

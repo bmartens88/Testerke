@@ -9,6 +9,7 @@
     <ItemGroup>
       <ProjectReference Include="..\..\..\Common\Testerke.Common.Application\Testerke.Common.Application.csproj" />
       <ProjectReference Include="..\Testerke.Modules.Users.Domain\Testerke.Modules.Users.Domain.csproj" />
+      <ProjectReference Include="..\Testerke.Modules.Users.IntegrationEvents\Testerke.Modules.Users.IntegrationEvents.csproj" />
     </ItemGroup>
 
 </Project>

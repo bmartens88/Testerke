@@ -40,6 +40,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testerke.Modules.Users.Pres
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Users", "Users", "{3BB3D6E8-8556-4C66-A783-2E1AE84358C9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testerke.Modules.Users.IntegrationEvents", "src\Backend\Modules\Users\Testerke.Modules.Users.IntegrationEvents\Testerke.Modules.Users.IntegrationEvents.csproj", "{18F9BC13-268A-47DB-9A28-E65A2F0E3790}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -64,6 +66,7 @@ Global
 		{1814CDC9-FC70-4A96-B45C-768DFDD97C5D} = {3BB3D6E8-8556-4C66-A783-2E1AE84358C9}
 		{CD8FC8D0-3BA0-4BA3-B947-E115C30FE085} = {3BB3D6E8-8556-4C66-A783-2E1AE84358C9}
 		{C2D681A8-6CBE-4335-B414-5FB6B4728D1B} = {3BB3D6E8-8556-4C66-A783-2E1AE84358C9}
+		{18F9BC13-268A-47DB-9A28-E65A2F0E3790} = {3BB3D6E8-8556-4C66-A783-2E1AE84358C9}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{0EE698F1-56A1-41FD-8212-7C747B80076B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -110,5 +113,9 @@ Global
 		{C2D681A8-6CBE-4335-B414-5FB6B4728D1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2D681A8-6CBE-4335-B414-5FB6B4728D1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2D681A8-6CBE-4335-B414-5FB6B4728D1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18F9BC13-268A-47DB-9A28-E65A2F0E3790}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18F9BC13-268A-47DB-9A28-E65A2F0E3790}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18F9BC13-268A-47DB-9A28-E65A2F0E3790}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18F9BC13-268A-47DB-9A28-E65A2F0E3790}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

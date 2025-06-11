@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using Testerke.Common.Application.EventBus;
 using Testerke.Common.Infrastructure.Data;
 
 namespace Testerke.Common.Infrastructure;
@@ -17,6 +18,8 @@ public static class DependencyInjection
     public static IServiceCollection AddInfrastructure(
         this IServiceCollection services)
     {
+        services.TryAddSingleton<IEventBus, EventBus.EventBus>();
+        
         services.TryAddSingleton<DomainEventsInterceptor>();
 
         return services;
